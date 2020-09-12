@@ -36,7 +36,7 @@ Lexing or tokenization is the process of converting a sequence of characters (su
 Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. <br><br>
 
 # Semantic Analysis<br>
-The semantic analysis phase checks the source program for semantic errors and gathers type information for the subsequent code-generation phase. It uses hierarchical structure determined by the syntax-analysis phase to identify the operators and operands of expressions and statements.<br><br>The sem
+The semantic analysis phase checks the source program for semantic errors and gathers type information for the subsequent code-generation phase. It uses hierarchical structure determined by the syntax-analysis phase to identify the operators and operands of expressions and statements.<br><br>
 
 
 # Intermediate Code Generation<br>
