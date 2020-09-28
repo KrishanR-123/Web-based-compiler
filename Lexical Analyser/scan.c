@@ -2,20 +2,19 @@
 #include "data.h"
 #include "decl.h"
 
-// Lexical scanning
-// Copyright (c) 2019 Warren Toomey, GPL3
 
-// Lexical scanning
-// Copyright (c) 2019 Warren Toomey, GPL3
 
-// Return the position of character c
-// in string s, or -1 if c not found
+
+// Return the position of character c in string s, or -1 if c not found
 static int chrpos(char *s, int c) {
   char *p;
 
   p = strchr(s, c);
   return (p ? p - s : -1);
 }
+
+
+
 
 // Get the next character from the input file.
 static int next(void) {
@@ -33,14 +32,18 @@ static int next(void) {
   return c;
 }
 
+
+
+
 // Put back an unwanted character
 static void putback(int c) {
   Putback = c;
 }
 
-// Skip past input that we don't need to deal with, 
-// i.e. whitespace, newlines. Return the first
-// character we do need to deal with.
+
+
+
+// Skip past input that we don't need to deal with, i.e. whitespace, newlines. Return the first character we do need to deal with.
 static int skip(void) {
   int c;
 
@@ -51,9 +54,10 @@ static int skip(void) {
   return (c);
 }
 
-// Scan and return an integer literal
-// value from the input file. Store
-// the value as a string in Text.
+
+
+
+// Scan and return an integer literal value from the input file. Store the value as a string in Text.
 static int scanint(int c) {
   int k, val = 0;
 
@@ -68,45 +72,47 @@ static int scanint(int c) {
   return val;
 }
 
-// Scan and return the next token found in the input.
-// Return 1 if token valid, 0 if no tokens left.
+
+
+
+
+// It will scan and return the next token found in the input. Returning 1 if token valid, 0 if no tokens left.
 int scan(struct token *t) {
   int c;
 
-  // Skip whitespace
+  // For skipping whitespace
   c = skip();
 
-  // Determine the token based on
-  // the input character
+  // Determine the token based on input character
   switch (c) {
-  case EOF:
+  case EOF: // EOF will return 0
     return (0);
-  case '+':
+  case '+': // + determined as T_PLUS  
     t->token = T_PLUS;
     break;
-  case '-':
+  case '-': // - determined as T_MINUS 
     t->token = T_MINUS;
     break;
-  case '*':
+  case '*': // * determined as T_STAR
     t->token = T_STAR;
     break;
-  case '/':
+  case '/': // / determined as T_SLASH
     t->token = T_SLASH;
     break;
   default:
 
-    // If it's a digit, scan the
-    // literal integer value in
+    // If it's a digit, scan the literal integer value
     if (isdigit(c)) {
       t->intvalue = scanint(c);
       t->token = T_INTLIT;
       break;
     }
-
+    
+     // If not recognised by any of above mentioned
     printf("Unrecognised character %c on line %d\n", c, Line);
     exit(1);
   }
 
-  // We found a token
+  // When a valid token
   return (1);
 }
