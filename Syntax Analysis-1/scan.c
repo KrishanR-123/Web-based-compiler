@@ -3,7 +3,7 @@
 #include "decl.h"
 
 // Lexical scanning
-// Copyright (c) 2019 Warren Toomey, GPL3
+
 
 // Return the position of character c
 // in string s, or -1 if c not found
