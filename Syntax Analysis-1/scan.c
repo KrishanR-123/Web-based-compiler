@@ -2,9 +2,6 @@
 #include "data.h"
 #include "decl.h"
 
-// Lexical scanning
-
-
 // Return the position of character c
 // in string s, or -1 if c not found
 static int chrpos(char *s, int c) {
