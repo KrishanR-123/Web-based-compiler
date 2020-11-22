@@ -3,7 +3,6 @@
 #include "decl.h"
 
 // AST tree functions
-// Copyright (c) 2019 Warren Toomey, GPL3
 
 // Build and return a generic AST node
 struct ASTnode *mkastnode(int op, struct ASTnode *left,
