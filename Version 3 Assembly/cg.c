@@ -3,7 +3,6 @@
 #include "decl.h"
 
 // Code generator for x86-64
-// Copyright (c) 2019 Warren Toomey, GPL3
 
 
 // List of available registers
