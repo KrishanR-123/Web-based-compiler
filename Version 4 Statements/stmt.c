@@ -3,7 +3,6 @@
 #include "decl.h"
 
 // Parsing of statements
-// Copyright (c) 2019 Warren Toomey, GPL3
 
 // statements: statement
 //      | statement statements
