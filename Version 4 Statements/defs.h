@@ -4,7 +4,6 @@
 #include <ctype.h>
 
 // Structure and enum definitions
-// Copyright (c) 2019 Warren Toomey, GPL3
 
 #define TEXTLEN		512	// Length of symbols in input
 
