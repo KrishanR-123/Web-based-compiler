@@ -3,7 +3,6 @@
 #include "decl.h"
 
 // AST tree interpreter
-// Copyright (c) 2019 Warren Toomey, GPL3
 
 // List of AST operators
 static char *ASTop[] = { "+", "-", "*", "/" };
